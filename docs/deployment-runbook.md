@@ -69,7 +69,7 @@ cd /srv/depthshop-bags/app
 npm run deploy:server
 ```
 
-`deploy:server` 会依次执行 `git pull --ff-only origin main`、`npm ci`、`npm run build`、重启 `store-picture-bag` 并保存 PM2 配置。`--ff-only` 会在服务器存在未处理改动时停止发布，不会强制覆盖生产文件。
+`deploy:server` 会依次执行 `git pull --ff-only origin main`、停止 `store-picture-bag`、`npm ci`、`npm run build`、启动 `store-picture-bag` 并保存 PM2 配置。构建期间会有短暂维护窗口，避免旧进程读取正在重建的 `.next` 文件而返回临时 `500`。`--ff-only` 会在服务器存在未处理改动时停止发布，不会强制覆盖生产文件。
 
 生产数据位于 `/srv/depthshop-bags/data`，环境变量位于 `.env.local`，两者均不进入 Git，也不会被上述发布命令覆盖。不要使用 `git reset --hard` 或面向该目录的 `rsync --delete` 作为常规发布方式。
 
