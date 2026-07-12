@@ -6,6 +6,7 @@ playwright-report/
 design-exports/
 tsconfig.tsbuildinfo
 .env.local
+.env.local.bak.*
 .env.example
 .DS_Store
 .claude/
