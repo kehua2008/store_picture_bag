@@ -11,6 +11,7 @@
 - Data dir: `/srv/depthshop-bags/data`
 - Upload dir: `/srv/depthshop-bags/uploads`
 - Required public URL env: `APP_PUBLIC_BASE_URL=http://47.120.21.152:7777`
+- Git remote: `https://github.com/kehua2008/store_picture_bag.git` (`main`)
 
 ## 低内存策略
 
@@ -30,6 +31,8 @@ PM2_APP_NAME=store-picture-bag npm run health:bags
 npm run cleanup:bags
 npm run cleanup:bags -- --hours=24
 ```
+
+发布新版本时在服务器执行 `cd /srv/depthshop-bags/app && npm run deploy:server`。该命令只拉取箱包仓库的 `main` 分支，随后构建并重启 `store-picture-bag`。
 
 `cleanup:bags` 默认 dry-run。只有确认候选文件属于箱包站数据目录后，才可以追加 `--delete`。
 

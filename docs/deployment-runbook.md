@@ -58,25 +58,31 @@ mkdir -p /srv/depthshop-bags/uploads
 
 确保运行 Node/PM2 的用户对 `data` 和 `uploads` 有读写权限。
 
-## 部署
+## Git 更新流程
 
-从仓库或本地同步代码到 `/srv/depthshop-bags/app` 后：
+箱包站使用独立仓库 `https://github.com/kehua2008/store_picture_bag.git`，服务器目录 `/srv/depthshop-bags/app` 已跟踪 `origin/main`。这套仓库、分支、服务器目录和 PM2 进程均不与服装站共用。
+
+日常发布顺序：先在本地完成检查并推送到 `main`，再在箱包服务器运行：
 
 ```bash
 cd /srv/depthshop-bags/app
-npm install
-npm run build
-pm2 start npm --name store-picture-bag -- run start:bags
-pm2 save
+npm run deploy:server
 ```
 
-更新箱包站时只重启箱包站进程：
+`deploy:server` 会依次执行 `git pull --ff-only origin main`、`npm ci`、`npm run build`、重启 `store-picture-bag` 并保存 PM2 配置。`--ff-only` 会在服务器存在未处理改动时停止发布，不会强制覆盖生产文件。
+
+生产数据位于 `/srv/depthshop-bags/data`，环境变量位于 `.env.local`，两者均不进入 Git，也不会被上述发布命令覆盖。不要使用 `git reset --hard` 或面向该目录的 `rsync --delete` 作为常规发布方式。
+
+## 首次部署
+
+仅在全新服务器目录需要执行：
 
 ```bash
+git clone https://github.com/kehua2008/store_picture_bag.git /srv/depthshop-bags/app
 cd /srv/depthshop-bags/app
-npm install
+npm ci
 npm run build
-pm2 restart store-picture-bag --update-env
+pm2 start npm --name store-picture-bag -- run start:bags
 pm2 save
 ```
 
