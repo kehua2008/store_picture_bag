@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>深度AI电商视觉工作站 - 行业全案版</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #020617; color: #f8fafc; font-family: 'PingFang SC', sans-serif; }
+        .platform-btn.active { background: #3b82f6; color: white; border-color: #60a5fa; box-shadow: 0 0 20px rgba(59, 130, 246, 0.4); }
+        .spec-btn.active { background: rgba(59, 130, 246, 0.2); border-color: #3b82f6; color: #60a5fa; }
+        .card-active { border: 2px solid #3b82f6 !important; background: rgba(59, 130, 246, 0.1) !important; }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+        .style-card:hover { transform: translateY(-2px); transition: all 0.2s; }
+    </style>
+</head>
+<body class="h-screen overflow-hidden flex flex-col">
+
+    <header class="h-14 border-b border-slate-800 bg-slate-900/90 backdrop-blur-md flex items-center justify-between px-8 z-50">
+        <div class="flex items-center space-x-3">
+            <div class="bg-blue-600 px-2 py-1 rounded font-black italic text-sm tracking-tighter">DEEP AI</div>
+            <div class="h-4 w-[1px] bg-slate-700"></div>
+            <h1 class="text-xs font-bold text-slate-400 tracking-widest uppercase">深度AI电商视觉工作站 · 箱包版</h1>
+        </div>
+        <div class="flex bg-slate-950 p-1 rounded-lg border border-slate-800">
+            <button class="px-6 py-1 rounded-md text-[11px] font-bold bg-blue-600 shadow-lg">图片生成</button>
+            <button class="px-6 py-1 rounded-md text-[11px] font-bold text-slate-500 hover:text-white transition">短视频生成</button>
+        </div>
+        <div class="flex items-center space-x-4 text-[11px] font-bold text-slate-500">
+            <span>算力剩余: 999+</span>
+            <div class="w-7 h-7 bg-blue-500 rounded-full border-2 border-slate-700"></div>
+        </div>
+    </header>
+
+    <main class="flex-1 flex overflow-hidden">
+        
+        <aside class="w-[440px] border-r border-slate-800 bg-slate-900/20 overflow-y-auto p-6 space-y-8 custom-scrollbar">
+            
+            <section>
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="text-blue-500 font-black italic text-sm">01</span>
+                    <h3 class="text-[11px] font-black text-slate-500 uppercase tracking-[0.2em]">分发平台选择</h3>
+                </div>
+                <div class="grid grid-cols-4 gap-2" id="platform-list">
+                    </div>
+            </section>
+
+            <section>
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="text-blue-500 font-black italic text-sm">02</span>
+                    <h3 class="text-[11px] font-black text-slate-500 uppercase tracking-[0.2em]">业务面与规格</h3>
+                </div>
+                <div class="flex flex-wrap gap-2" id="spec-list">
+                    </div>
+            </section>
+
+            <section>
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="text-blue-500 font-black italic text-sm">03</span>
+                    <h3 class="text-[11px] font-black text-slate-500 uppercase tracking-[0.2em]">模特形象锁定</h3>
+                </div>
+                <div class="grid grid-cols-2 gap-3" id="model-list">
+                    </div>
+            </section>
+
+            <section>
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-blue-500 font-black italic text-sm">04</span>
+                        <h3 class="text-[11px] font-black text-slate-500 uppercase tracking-[0.2em]">Top商家画风复刻</h3>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 gap-3" id="style-list">
+                    </div>
+            </section>
+
+        </aside>
+
+        <div class="flex-1 bg-slate-950 p-12 flex flex-col items-center justify-center relative">
+            <div class="max-w-3xl w-full">
+                <div class="mb-10 text-center">
+                    <h2 class="text-4xl font-black mb-4 tracking-tight" id="main-title">上传样衣图片</h2>
+                    <p class="text-slate-500 text-sm italic" id="main-subtitle">系统已自动适配 [天猫] 视觉协议与 Top 商家算法</p >
+                </div>
+
+                <div class="border-2 border-dashed border-slate-800 rounded-[50px] p-20 flex flex-col items-center justify-center group hover:border-blue-500 transition-all cursor-pointer bg-slate-900/10">
+                    <div class="w-24 h-24 bg-blue-600 rounded-[30px] flex items-center justify-center text-4xl shadow-2xl group-hover:scale-110 transition">👔</div>
+                    <p class="mt-8 text-slate-400 font-bold">点击或拖拽衣服平铺图、人台图至此处</p >
+                    <p class="mt-2 text-[10px] text-slate-600 uppercase tracking-widest text-center">Auto-Detecting Fabric & Texture</p >
+                </div>
+
+                <button class="w-full mt-8 bg-white text-black py-5 rounded-2xl font-black text-xl hover:bg-blue-500 hover:text-white transition-all shadow-2xl flex items-center justify-center space-x-4 active:scale-[0.98]">
+                    <span>一键生成全套视觉包</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="absolute right-10 bottom-10 w-40 space-y-3">
+                <p class="text-[9px] font-black text-slate-600 uppercase tracking-widest text-right">Recently Generated</p >
+                <div class="aspect-[3/4] bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden opacity-50 grayscale hover:grayscale-0 transition cursor-pointer">
+                    < img src="https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?w=200" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // 核心行业数据库
+        const industryDB = {
+            tmall: {
+                name: "天猫/淘宝",
+                specs: ["主图 (1:1)", "长主图 (3:4)", "详情页主视觉", "全选导出"],
+                models: [
+                    { id: 'm1', name: '静奢老钱风', tag: '30-40岁/高端', icon: '🍷' },
+                    { id: 'm2', name: '职场精英', tag: '28-35岁/商务', icon: '💼' },
+                    { id: 'm3', name: '韩系暖男', tag: '20-30岁/温柔', icon: '🍂' }
+                ],
+                styles: [
+                    { id: 's1', name: '意式公寓 (Luxury Deco)', desc: '暖调、大理石背景、高净值感', platform: '天猫Top商家同款' },
+                    { id: 's2', name: '北欧极简 (Nordic Clean)', desc: '纯白背景、极其均匀、高转化率', platform: '天猫爆款视觉' },
+                    { id: 's3', name: '黄昏落日 (Sunset Glow)', desc: '长投影、侧逆光、浪漫氛围感', platform: '天猫情感营销' }
+                ]
+            },
+            dewu: {
+                name: "得物Dewu",
+                specs: ["正方形主图", "透明SKU图", "质感细节图"],
+                models: [
+                    { id: 'm4', name: '潮酷高街', tag: '18-28岁/冷峻', icon: '👟' },
+                    { id: 'm5', name: '山系硬核', tag: '25-35岁/野性', icon: '⛰️' }
+                ],
+                styles: [
+                    { id: 's4', name: '水泥工业 (Industrial)', desc: '冷灰色调、毛坯墙、突出廓形', platform: '得物潮流首选' },
+                    { id: 's5', name: '深夜霓虹 (Cyber Neon)', desc: '红蓝撞色、未来感、深夜街头', platform: '得物潮玩风格' }
+                ]
+            },
+            xhs: {
+                name: "小红书",
+                specs: ["种草封面 (3:4)", "内容长图 (9:16)"],
+                models: [
+                    { id: 'm6', name: '日系CityBoy', tag: '18-25岁/清爽', icon: '🛹' },
+                    { id: 'm7', name: '运动型男', tag: '全年龄/肌肉', icon: '🏀' }
+                ],
+                styles: [
+                    { id: 's6', name: '胶片街拍 (Vintage)', desc: '颗粒感、抓拍、生活气息', platform: '小红书种草算法' },
+                    { id: 's7', name: '森林营地 (Forest)', desc: '墨绿色调、自然投影、松弛感', platform: '小红书户外流行' }
+                ]
+            },
+            pdd: {
+                name: "拼多多",
+                specs: ["点击王主图", "5张主图包", "详情页长图"],
+                models: [
+                    { id: 'm8', name: '复古咔叽', tag: '30-45岁/硬汉', icon: '🏍️' }
+                ],
+                styles: [
+                    { id: 's8', name: '高亮实拍 (Real)', desc: '模仿手机原相机、真实信任感', platform: 'PDD极速决策' },
+                    { id: 's9', name: '黑白艺术 (Art)', desc: '极致反差、线条感', platform: '品牌升级款' }
+                ]
+            }
+        };
+
+        // 渲染函数：根据所选平台刷新页面
+        function refreshUI(platformKey) {
+            const data = industryDB[platformKey];
+
+            // 1. 更新主标题和提示
+            document.getElementById('main-title').innerText = `为 [${data.name}] 生成视觉`;
+            document.getElementById('main-subtitle').innerText = `系统已自动适配 ${data.name} 视觉协议与 Top 商家算法`;
+
+            // 2. 渲染平台列表
+            const platformList = document.getElementById('platform-list');
+            platformList.innerHTML = Object.keys(industryDB).map(key => `
+                <button onclick="switchPlatform('${key}')" class="platform-btn border border-slate-800 p-2 rounded-lg text-[10px] font-bold ${key === platformKey ? 'active' : ''}">
+                    ${industryDB[key].name}
+                </button>
+            `).join('');
+
+            // 3. 渲染规格
+            const specList = document.getElementById('spec-list');
+            specList.innerHTML = data.specs.map((s, i) => `
+                <button class="spec-btn border border-slate-800 px-4 py-2 rounded-full text-[10px] font-bold hover:border-blue-500 ${i===0?'active':''}">
+                    ${s}
+                </button>
+            `).join('');
+
+            // 4. 渲染模特形象
+            const modelList = document.getElementById('model-list');
+            modelList.innerHTML = data.models.map((m, i) => `
+                <div class="border border-slate-800 p-3 rounded-2xl flex items-center space-x-3 cursor-pointer hover:border-blue-500 group ${i===0?'card-active':''}">
+                    <div class="text-2xl">${m.icon}</div>
+                    <div>
+                        <p class="text-[11px] font-black">${m.name}</p >
+                        <p class="text-[9px] text-slate-500">${m.tag}</p >
+                    </div>
+                </div>
+            `).join('');
+
+            // 5. 渲染风格画风
+            const styleList = document.getElementById('style-list');
+            styleList.innerHTML = data.styles.map((style, i) => `
+                <div class="style-card border border-slate-800 p-4 rounded-2xl bg-slate-900/40 cursor-pointer hover:border-blue-500 group relative ${i===0?'card-active':''}">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <p class="text-[11px] font-black">${style.name}</p >
+                            <p class="text-[9px] text-slate-500 mt-1">${style.desc}</p >
+                        </div>
+                        <span class="text-[8px] bg-blue-600/20 text-blue-400 px-2 py-0.5 rounded-full font-bold">${style.platform}</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-1 mt-3 opacity-30">
+                        <div class="h-10 bg-slate-800 rounded"></div>
+                        <div class="h-10 bg-slate-800 rounded"></div>
+                        <div class="h-10 bg-slate-800 rounded"></div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 切换平台函数
+        function switchPlatform(key) {
+            refreshUI(key);
+        }
+
+        // 初始运行显示天猫数据
+        switchPlatform('tmall');
+    </script>
+</body>
+</html>

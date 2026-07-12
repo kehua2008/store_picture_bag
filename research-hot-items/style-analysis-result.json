@@ -1,0 +1,985 @@
+{
+  "batchId": "style-candidate-batch-reference-driven-diverse-womenswear-20260608",
+  "analyzedAt": "2026-06-08T00:15:00.000+08:00",
+  "analyst": "codex-style-library-analyst",
+  "styleGroups": [
+    {
+      "styleName": "空港机翼高冲击",
+      "platform": "taobao",
+      "category": "women",
+      "categoryScope": [
+        "women",
+        "apparel"
+      ],
+      "imageType": "scene_main",
+      "imageTypeScope": [
+        "cover",
+        "scene_main",
+        "model"
+      ],
+      "productBrief": "女装套装、短裙、衬衫、机能风或度假感穿搭，适合封面图和强记忆场景图",
+      "sceneBrief": "私人飞机、机场跑道、蓝天硬光、机翼和登机梯形成强透视背景，产品轮廓保持清晰",
+      "sampleIds": [
+        "airport-wing-seated-sunglasses-01",
+        "airport-cockpit-seated-02",
+        "airport-cockpit-standing-03",
+        "airport-wing-side-sit-04",
+        "airport-wing-side-sit-05"
+      ],
+      "promptCore": "High-impact aviation runway womenswear editorial, small aircraft or jet canopy as contextual prop, bright blue sky, clean hard daylight, confident vacation-luxury styling, readable full outfit and product silhouette.",
+      "promptVariants": [
+        "model seated on the aircraft wing edge, one hand adjusting sunglasses, low-angle full-body shot with blue sky and runway lines",
+        "model standing beside an open aircraft canopy, one foot on the step, three-quarter body angle, crisp shirt and skirt details visible",
+        "model leaning lightly against the wing tip, legs angled, midday sunlight and clean tarmac background",
+        "model walking away from the aircraft stairs then turning back, wide environmental frame with aircraft nose and open sky",
+        "model sitting near the cockpit opening, relaxed arm on canopy frame, product front still clear and not hidden"
+      ],
+      "negativePrompt": "street wall standing pose, plain building facade, motionless front-facing catalog pose, copied aircraft markings, visible logo, watermark, text, unsafe runway action, distorted airplane, hidden garment",
+      "rules": {
+        "background": [
+          "small aircraft runway",
+          "open cockpit canopy",
+          "airfield tarmac",
+          "aircraft wing edge",
+          "boarding ladder"
+        ],
+        "lighting": [
+          "midday hard sunlight",
+          "clear blue-sky daylight",
+          "high contrast but clean shadows",
+          "sunlit runway reflection"
+        ],
+        "camera": [
+          "low-angle full body",
+          "three-quarter side body",
+          "wide environmental cover",
+          "medium full-body crop",
+          "slight upward sky composition"
+        ],
+        "pose": [
+          "sit on wing edge",
+          "adjust sunglasses",
+          "stand on boarding step",
+          "lean against wing",
+          "walk and turn back"
+        ],
+        "palette": [
+          "aviation white",
+          "sky blue",
+          "aircraft red accent",
+          "black boots",
+          "clean sunlit neutrals"
+        ],
+        "composition": [
+          "aircraft forms diagonal leading lines",
+          "product remains central and unobstructed",
+          "leave sky negative space for cover crop",
+          "avoid tight face-only crop"
+        ],
+        "color": [
+          "clear saturated sky",
+          "bright white highlights",
+          "controlled red accents",
+          "crisp black contrast"
+        ],
+        "avoid": [
+          "standing on street against one wall",
+          "repeating the same cockpit seat pose across a suite",
+          "logo or tail number emphasis",
+          "overcrowded airport background"
+        ],
+        "mustUse": [
+          "visible full outfit",
+          "one aircraft-related scenic element",
+          "confident non-static pose"
+        ]
+      }
+    },
+    {
+      "styleName": "湖畔高尔夫休闲",
+      "platform": "taobao",
+      "category": "women",
+      "categoryScope": [
+        "women",
+        "apparel",
+        "sportswear"
+      ],
+      "imageType": "scene_main",
+      "imageTypeScope": [
+        "scene_main",
+        "model",
+        "feed_card"
+      ],
+      "productBrief": "女装休闲套装、运动短裙、T 恤、夏季针织、轻户外穿搭",
+      "sceneBrief": "湖边草坪、高尔夫车、露台遮阳伞、宠物或自行车点缀，强调清爽度假和轻运动生活方式",
+      "sampleIds": [
+        "resort-bike-dog-lawn-01",
+        "golf-cart-standing-01",
+        "golf-cart-front-standing-02",
+        "resort-lounge-seated-03",
+        "resort-lounge-seated-04",
+        "resort-green-door-seated-05",
+        "resort-arcade-drink-06",
+        "resort-deck-chair-07",
+        "resort-arcade-standing-08",
+        "golf-garden-sports-09",
+        "golf-lawn-crouch-10",
+        "golf-lawn-walk-11"
+      ],
+      "promptCore": "Lake resort and golf-leisure womenswear lifestyle, green lawn, golf cart, terrace seating or lakeside path, natural vacation daylight, relaxed sporty pose, clean readable garment shape.",
+      "promptVariants": [
+        "model standing beside a golf cart with one hand on the cart roof, full outfit visible, lawn and trees behind",
+        "model seated on a striped outdoor lounge chair near the lake, knees angled, soft resort daylight, product front readable",
+        "model pushing or holding a bicycle on a lakeside path, pet optional, calm green background and clear full-body crop",
+        "model sitting at a terrace chair with shopping tote or drink as small prop, sporty casual outfit visible from head to toe",
+        "model crouching on a bright lawn, one hand holding cap brim, sunlit grass texture and open sky",
+        "model walking across a golf-course path with bag in hand, 3/4 side angle, relaxed holiday motion"
+      ],
+      "negativePrompt": "static street wall pose, cluttered cafe signage, heavy commercial text, overused plain gray facade, hidden waistline, overly busy props, copied pet or logo, watermark",
+      "rules": {
+        "background": [
+          "golf cart under trees",
+          "lakeside lawn",
+          "outdoor lounge chair",
+          "terrace deck",
+          "bike path",
+          "green resort gate"
+        ],
+        "lighting": [
+          "fresh natural daylight",
+          "tree-filtered sunlight",
+          "soft lake reflection",
+          "clear summer sun",
+          "light shade"
+        ],
+        "camera": [
+          "eye-level full body",
+          "medium seated crop",
+          "wide lawn environment",
+          "three-quarter walking shot",
+          "slightly high angle for seated lounge pose"
+        ],
+        "pose": [
+          "hand on golf cart",
+          "sit on lounge chair",
+          "push bicycle",
+          "crouch on grass",
+          "hold cap brim",
+          "walk with tote"
+        ],
+        "palette": [
+          "lawn green",
+          "white sportswear",
+          "navy accent",
+          "soft beige deck",
+          "sky blue"
+        ],
+        "composition": [
+          "keep product front unobstructed",
+          "use green space as background block",
+          "small props should not compete with clothes",
+          "suite images alternate sitting and standing"
+        ],
+        "color": [
+          "clean summer greens",
+          "white highlight balance",
+          "low clutter resort tones"
+        ],
+        "avoid": [
+          "consecutive use after another grass-lawn scene",
+          "plain wall street pose",
+          "large readable brand signage",
+          "props covering top or skirt"
+        ],
+        "mustUse": [
+          "relaxed vacation movement",
+          "outdoor leisure context",
+          "visible garment fit"
+        ]
+      }
+    },
+    {
+      "styleName": "森林花径漫步",
+      "platform": "taobao",
+      "category": "women",
+      "categoryScope": [
+        "women",
+        "apparel"
+      ],
+      "imageType": "model",
+      "imageTypeScope": [
+        "model",
+        "scene_main",
+        "feed_card"
+      ],
+      "productBrief": "连衣裙、半裙、针织开衫、森系或轻甜女装，适合模特图和氛围场景图",
+      "sceneBrief": "森林木栈道、湖边树荫、花丛草地、白色小屋，动作以走动、回头、蹲坐、坐花丛为主",
+      "sampleIds": [
+        "forest-flower-seated-dress-01",
+        "forest-boardwalk-back-walk-02",
+        "forest-lakeside-tree-lean-03",
+        "forest-flower-recline-04",
+        "forest-flower-seated-05",
+        "forest-cottage-standing-06",
+        "forest-cottage-turnback-07"
+      ],
+      "promptCore": "Romantic forest walkway and flower-field womenswear lifestyle, lush natural greenery, wooden path or wild flowers, gentle motion pose, soft feminine styling with clear clothing texture.",
+      "promptVariants": [
+        "model walking on a wooden forest boardwalk, looking back over shoulder, dress moving naturally in dappled shade",
+        "model sitting at the edge of a flower bed, one hand touching flowers, low angle with greenery framing the outfit",
+        "model leaning near a lakeside tree trunk, one foot on wooden step, soft pink or light dress details visible",
+        "model half-reclining in a wildflower field, arms relaxed upward, top and skirt readable with flowers around but not covering product",
+        "model standing by a small countryside house and gravel path, 3/4 body turn, natural cottage background",
+        "model crouching among green plants, hand near hair, medium full-body crop and gentle natural smile"
+      ],
+      "negativePrompt": "urban wall standing pose, hard flash, plastic studio flowers, over-dense plants covering garment, copied face, watermark, text overlay, muddy green cast",
+      "rules": {
+        "background": [
+          "forest wooden boardwalk",
+          "lakeside trees",
+          "wildflower field",
+          "garden path",
+          "white countryside house",
+          "flower bed"
+        ],
+        "lighting": [
+          "dappled tree shade",
+          "soft overcast greenery light",
+          "late afternoon garden sun",
+          "gentle backlight through leaves"
+        ],
+        "camera": [
+          "full-body walking shot",
+          "low flower-level angle",
+          "medium seated crop",
+          "three-quarter back-turn",
+          "wide natural environment"
+        ],
+        "pose": [
+          "walk and turn back",
+          "sit among flowers",
+          "lean against tree",
+          "crouch in grass",
+          "touch hair",
+          "light skirt movement"
+        ],
+        "palette": [
+          "leaf green",
+          "soft pink",
+          "cream white",
+          "wildflower yellow",
+          "natural wood"
+        ],
+        "composition": [
+          "use plants as frame not obstruction",
+          "reserve garment readability in center",
+          "alternate walking, sitting and crouching in a suite"
+        ],
+        "color": [
+          "fresh but not neon greens",
+          "soft dress colors",
+          "natural warm highlights"
+        ],
+        "avoid": [
+          "repeating front-facing standing pose",
+          "plants hiding product",
+          "single flat wall background",
+          "over-romantic blur that loses clothing detail"
+        ],
+        "mustUse": [
+          "visible garment silhouette",
+          "organic nature setting",
+          "non-static model action"
+        ]
+      }
+    },
+    {
+      "styleName": "山野湖泊徒步",
+      "platform": "taobao",
+      "category": "women",
+      "categoryScope": [
+        "women",
+        "apparel",
+        "outdoor"
+      ],
+      "imageType": "scene_main",
+      "imageTypeScope": [
+        "cover",
+        "scene_main",
+        "model"
+      ],
+      "productBrief": "户外运动、机能背心、冲锋衣、短裤、瑜伽裤、徒步背包穿搭",
+      "sceneBrief": "高山湖泊、岩石、木栏杆、蓝天云层和背包道具，强调运动感和开阔环境",
+      "sampleIds": [
+        "mountain-rail-seated-01",
+        "mountain-backpack-walk-02",
+        "mountain-backpack-portrait-03",
+        "mountain-rock-seated-04",
+        "mountain-lake-wide-seated-05"
+      ],
+      "promptCore": "Mountain lake hiking womenswear editorial, alpine water, rocky path, backpack or trail railing, clear sky and high-altitude sunlight, active pose with product fit and function visible.",
+      "promptVariants": [
+        "model sitting on a mountain railing beside turquoise lake, boots visible, wide scenic frame and outfit front readable",
+        "model walking on a trail with backpack straps held by both hands, low-angle sky background and athletic garment lines",
+        "model seated on rocks near an alpine lake, one knee raised, backpack beside body without covering product",
+        "model standing on a ridge path, hand shielding sunlight, full-body crop with mountains and lake behind",
+        "model pausing mid-hike and turning toward camera, 3/4 body angle, wind movement in jacket or hair"
+      ],
+      "negativePrompt": "city wall pose, indoor hotel room, fake mountain backdrop, excessive blur, backpack covering the garment, copied landscape, watermark, text, unsafe cliff pose",
+      "rules": {
+        "background": [
+          "alpine lake",
+          "mountain trail",
+          "rocky viewpoint",
+          "wooden railing",
+          "open sky and clouds"
+        ],
+        "lighting": [
+          "high-altitude sunlight",
+          "clear blue daylight",
+          "crisp side light",
+          "windy outdoor contrast"
+        ],
+        "camera": [
+          "wide scenic cover",
+          "low-angle full body",
+          "medium hiking portrait",
+          "seated rock crop",
+          "three-quarter trail movement"
+        ],
+        "pose": [
+          "hold backpack straps",
+          "sit on rock",
+          "lean on wooden railing",
+          "walk uphill",
+          "shield sun",
+          "turn back mid-hike"
+        ],
+        "palette": [
+          "lake blue",
+          "mountain brown",
+          "black technical accents",
+          "white cloud",
+          "sunlit green"
+        ],
+        "composition": [
+          "show environment scale but keep product central",
+          "use horizon away from face line",
+          "props support activity but do not block garment"
+        ],
+        "color": [
+          "clean alpine blues",
+          "earth neutrals",
+          "sporty black-white contrast"
+        ],
+        "avoid": [
+          "consecutive grass resort scene if previous image is lawn",
+          "hidden torso under backpack",
+          "plain wall background",
+          "unsafe edge sitting"
+        ],
+        "mustUse": [
+          "outdoor function cue",
+          "visible fit and mobility",
+          "open mountain or lake context"
+        ]
+      }
+    },
+    {
+      "styleName": "海岸游艇日落",
+      "platform": "taobao",
+      "category": "women",
+      "categoryScope": [
+        "women",
+        "apparel",
+        "swimwear"
+      ],
+      "imageType": "cover",
+      "imageTypeScope": [
+        "cover",
+        "scene_main",
+        "model"
+      ],
+      "productBrief": "泳装、吊带、短上衣、度假裙、海边外套等夏季度假女装",
+      "sceneBrief": "海边、游艇、落日沙滩、海风和水面反光，动作强调坐、倚、迎风、回头",
+      "sampleIds": [
+        "coast-yacht-rail-01",
+        "coast-sunset-rocks-02",
+        "coast-sunset-jacket-03",
+        "coast-yacht-back-seated-04",
+        "coast-beach-sunset-swim-05"
+      ],
+      "promptCore": "Coastal yacht and sunset beach womenswear lifestyle, ocean horizon, boat deck or sandy shore, wind movement, sunlit skin and fabric texture, resort editorial with clear product read.",
+      "promptVariants": [
+        "model leaning on yacht rail with blue ocean behind, wind in hair, medium full-body crop and top details sharp",
+        "model sitting on a boat stern facing the sea, side-back angle, garment silhouette readable against bright water",
+        "model standing on beach at sunset with jacket or cover-up lifted by wind, warm rim light and clear waistline",
+        "model walking along wet sand and turning toward camera, distant waves and orange sky, product front visible",
+        "model resting on coastal rocks at golden hour, one hand near hair, strong sky gradient but no text overlay"
+      ],
+      "negativePrompt": "street wall pose, indoor plain room, overexposed water, copied bikini pose, unsafe boat action, wet fabric hiding product, watermark, text, logo",
+      "rules": {
+        "background": [
+          "open sea",
+          "yacht deck",
+          "boat rail",
+          "sunset beach",
+          "coastal rocks",
+          "wet sand"
+        ],
+        "lighting": [
+          "golden hour backlight",
+          "blue-sky sea daylight",
+          "warm sunset rim light",
+          "water reflection",
+          "clear side light"
+        ],
+        "camera": [
+          "medium full-body yacht shot",
+          "wide sunset cover",
+          "side-back seated crop",
+          "low beach angle",
+          "three-quarter walking frame"
+        ],
+        "pose": [
+          "lean on rail",
+          "sit on boat edge",
+          "walk on beach",
+          "hold jacket in wind",
+          "turn back near waves",
+          "hand near hair"
+        ],
+        "palette": [
+          "sea blue",
+          "sunset gold",
+          "white boat",
+          "black or navy swimwear",
+          "warm sand"
+        ],
+        "composition": [
+          "horizon kept level",
+          "product separated from bright water",
+          "wind movement adds variety",
+          "avoid repeated front standing"
+        ],
+        "color": [
+          "balanced blue and gold",
+          "clean skin tones",
+          "controlled highlight on water"
+        ],
+        "avoid": [
+          "same beach background twice in a row",
+          "unreadable dark product against sunset",
+          "plain wall",
+          "excessive glamour retouch"
+        ],
+        "mustUse": [
+          "coastal context",
+          "visible product fit",
+          "dynamic wind or movement cue"
+        ]
+      }
+    },
+    {
+      "styleName": "城市高空夜景",
+      "platform": "taobao",
+      "category": "women",
+      "categoryScope": [
+        "women",
+        "apparel"
+      ],
+      "imageType": "scene_main",
+      "imageTypeScope": [
+        "cover",
+        "scene_main",
+        "model"
+      ],
+      "productBrief": "通勤裙装、皮衣、短外套、派对装、轻奢都市女装",
+      "sceneBrief": "桥下江景、城市街角、高空玻璃、夜景窗边和落日观景位，强调都市空间纵深和灯光变化",
+      "sampleIds": [
+        "city-bridge-skyline-01",
+        "city-night-window-crouch-02",
+        "city-sunset-glass-03",
+        "city-doorway-sunglasses-04",
+        "city-street-lensflare-05",
+        "city-blue-sky-low-angle-06"
+      ],
+      "promptCore": "Urban skyline and high-rise womenswear editorial, city bridge, glass observatory, night view window or sunlit street, polished confident styling, strong spatial depth with readable outfit.",
+      "promptVariants": [
+        "model leaning on riverside railing under a bridge, skyline behind, wide cover crop and dress silhouette clean",
+        "model crouching beside a high-rise night window, city lights outside, leather boots and outfit texture visible",
+        "model standing by panoramic glass at sunset, one hand on rail, warm city haze and clear garment outline",
+        "model walking through a sunlit city street corner, lens flare controlled, 3/4 body turn with bag as small prop",
+        "model standing at a modern doorway in sunglasses, one hand adjusting coat, vertical architectural lines behind",
+        "model captured from a low angle against clean blue sky, dynamic fashion pose, long vertical silhouette and product lines readable"
+      ],
+      "negativePrompt": "blank wall-only background, no-action front pose, crowded traffic, readable store signs, logo, watermark, text overlay, dark clothing lost in night background",
+      "rules": {
+        "background": [
+          "city skyline",
+          "bridge and river",
+          "high-rise glass window",
+          "night city lights",
+          "sunlit street corner",
+          "modern doorway",
+          "clean blue sky low-angle backdrop"
+        ],
+        "lighting": [
+          "golden city sunset",
+          "neon night ambient",
+          "window backlight",
+          "hard urban sunlight",
+          "controlled lens flare",
+          "clear-sky daylight"
+        ],
+        "camera": [
+          "wide skyline cover",
+          "medium full-body railing shot",
+          "low night-window angle",
+          "three-quarter walking street shot",
+          "vertical architecture framing",
+          "low-angle elongated full-body"
+        ],
+        "pose": [
+          "lean on railing",
+          "crouch by window",
+          "adjust coat",
+          "walk with bag",
+          "turn toward skyline",
+          "hand on glass rail",
+          "dynamic low-angle fashion stance"
+        ],
+        "palette": [
+          "city gray",
+          "glass blue",
+          "sunset amber",
+          "night black",
+          "metallic highlights"
+        ],
+        "composition": [
+          "use skyline depth instead of flat wall",
+          "separate dark garments from night view",
+          "show full outfit on main/model images"
+        ],
+        "color": [
+          "urban neutral base",
+          "small warm light accents",
+          "balanced night contrast"
+        ],
+        "avoid": [
+          "plain street wall repetition",
+          "unreadable black-on-black outfit",
+          "busy signage",
+          "overdone neon"
+        ],
+        "mustUse": [
+          "recognizable city depth",
+          "confident urban pose",
+          "clear product silhouette"
+        ]
+      }
+    },
+    {
+      "styleName": "艺廊拱廊轻奢",
+      "platform": "taobao",
+      "category": "women",
+      "categoryScope": [
+        "women",
+        "apparel"
+      ],
+      "imageType": "scene_main",
+      "imageTypeScope": [
+        "scene_main",
+        "model",
+        "feed_card"
+      ],
+      "productBrief": "连衣裙、套装、精致针织、轻礼服和高级感女装",
+      "sceneBrief": "美术馆雕塑、长拱廊、欧式庭院和轻奢空间，画面克制、线条规整、产品质感清晰",
+      "sampleIds": [
+        "gallery-sculpture-dress-01",
+        "gallery-arcade-corridor-02",
+        "hotel-floor-recline-01"
+      ],
+      "promptCore": "Quiet luxury gallery and arcade womenswear editorial, sculpture hall or vaulted corridor, elegant architectural symmetry, restrained pose, refined fabric texture and silhouette readability.",
+      "promptVariants": [
+        "model standing beside a white gallery sculpture, soft museum daylight, full dress silhouette and clean negative space",
+        "model walking through a vaulted arcade corridor, centered perspective, one hand lightly touching railing, elegant 3/4 body angle",
+        "model seated on a low bench in a refined gallery room, knees angled, product drape and fabric texture clear",
+        "model pausing under an archway with long corridor depth, subtle hand near waist, calm editorial mood",
+        "model leaning by a stone balustrade in a museum courtyard, neutral palette and polished styling"
+      ],
+      "negativePrompt": "street wall standing pose, flashy nightclub luxury, copied artwork, visible museum labels, logos, text, watermark, excessive props, distorted architecture",
+      "rules": {
+        "background": [
+          "white sculpture gallery",
+          "arched corridor",
+          "stone balustrade",
+          "museum courtyard",
+          "vaulted hallway"
+        ],
+        "lighting": [
+          "soft indoor daylight",
+          "gallery ambient light",
+          "warm corridor lighting",
+          "low-contrast luxury light"
+        ],
+        "camera": [
+          "centered corridor perspective",
+          "medium full-body portrait",
+          "wide architecture frame",
+          "slightly low elegant angle"
+        ],
+        "pose": [
+          "walk under arch",
+          "stand beside sculpture",
+          "touch railing",
+          "seated poised pose",
+          "hand near waist"
+        ],
+        "palette": [
+          "stone beige",
+          "museum white",
+          "soft pink",
+          "black accent",
+          "warm gold"
+        ],
+        "composition": [
+          "architecture creates depth",
+          "avoid copying exact art placement",
+          "product remains the subject over decor"
+        ],
+        "color": [
+          "neutral luxury tones",
+          "low saturation",
+          "clean skin tone"
+        ],
+        "avoid": [
+          "flat facade background",
+          "source artwork replication",
+          "busy visitor crowd",
+          "overly ornate distractions"
+        ],
+        "mustUse": [
+          "refined interior or cultural-space context",
+          "elegant controlled pose",
+          "clear fabric texture"
+        ]
+      }
+    },
+    {
+      "styleName": "酒店窗光生活",
+      "platform": "taobao",
+      "category": "women",
+      "categoryScope": [
+        "women",
+        "apparel"
+      ],
+      "imageType": "model",
+      "imageTypeScope": [
+        "model",
+        "detail",
+        "scene_main"
+      ],
+      "productBrief": "皮衣、外套、针织、短裙、居家度假服和细节图，适合强调材质、搭配和生活方式",
+      "sceneBrief": "酒店房间、窗边、床沿、干净墙面和室内暖光，重点让商品材质可读，动作从躺、坐、整理衣服到镜前站立变化",
+      "sampleIds": [
+        "hotel-window-collar-close-02",
+        "hotel-bed-leather-sit-03",
+        "hotel-bed-leather-side-04",
+        "hotel-room-swimwear-05",
+        "hotel-clean-wall-knit-06",
+        "hotel-clean-wall-fullbody-07"
+      ],
+      "promptCore": "Hotel room and window-light womenswear lifestyle, clean interior or simple wall used for product readability, natural window light or warm room light, relaxed seated or dressing pose, fabric and fit remain clear.",
+      "promptVariants": [
+        "model sitting on a hotel bed edge, one hand adjusting jacket sleeve, warm room light and boots visible",
+        "model reclining lightly on a tatami or carpeted floor, top and shorts readable, minimal props around body",
+        "model standing near a mirror or room window in swimwear or lounge outfit, sunset room light and clean full-body crop",
+        "close medium shot by a bright window, model holding coat collar, fabric texture and collar detail emphasized",
+        "model standing against a clean exterior wall for a detail-readable outfit shot, hand at waist, no street clutter",
+        "model seated on bed with bag beside body, legs angled, leather or denim texture sharp and unobstructed"
+      ],
+      "negativePrompt": "repeating plain wall as the whole suite, front-facing no-action stance, messy hotel room, text, watermark, logo, product hidden by bag or blanket, low-resolution mirror selfie look",
+      "rules": {
+        "background": [
+          "hotel bed",
+          "room window",
+          "warm interior wall",
+          "clean minimal wall",
+          "mirror corner",
+          "tatami or carpet floor"
+        ],
+        "lighting": [
+          "high window light",
+          "warm hotel lamp light",
+          "soft indoor daylight",
+          "sunset window glow",
+          "clean shaded wall light"
+        ],
+        "camera": [
+          "medium full-body seated crop",
+          "slightly high indoor angle",
+          "close medium fabric detail",
+          "eye-level clean wall shot",
+          "bed-edge diagonal composition"
+        ],
+        "pose": [
+          "sit on bed edge",
+          "adjust jacket",
+          "hold collar",
+          "recline on floor",
+          "stand near mirror",
+          "hand at waist"
+        ],
+        "palette": [
+          "warm beige",
+          "clean white",
+          "black leather",
+          "soft gray",
+          "muted brown"
+        ],
+        "composition": [
+          "best for detail and model images",
+          "use simple backgrounds only after stronger scene images",
+          "props must not cover product"
+        ],
+        "color": [
+          "warm indoor neutrals",
+          "controlled shadow",
+          "natural fabric color"
+        ],
+        "avoid": [
+          "consecutive wall-only images",
+          "street wall as default",
+          "messy luggage or clothes clutter",
+          "mirror selfie artifact"
+        ],
+        "mustUse": [
+          "clear product material",
+          "relaxed lifestyle action",
+          "clean background supporting detail readability"
+        ]
+      }
+    }
+  ],
+  "suiteOrchestrationRules": {
+    "backgroundRotation": [
+      "同一套图内不可连续使用同一背景大类；飞机、草地湖畔、森林花丛、山野湖泊、海边、城市高空、艺廊、酒店室内至少轮换 4 类。",
+      "场景图和封面图优先使用高差异场景：飞机、山野湖泊、海边游艇、城市高空。",
+      "如果上一张使用草地或森林，下一张应切换到海边、城市、室内或飞机，避免连续绿色背景。"
+    ],
+    "imageRoleRules": [
+      "主图保持产品正面清晰，可使用轻动作和干净背景，不追求夸张场景。",
+      "封面图负责记忆点，优先选择飞机、海岸、山野、城市高空等强环境。",
+      "场景图负责背景差异和生活方式，使用坐、倚、走、回头、扶栏、调整衣服、背包行走、蹲坐等动作。",
+      "模特图重点变化姿势和角度，不连续生成正面站立。",
+      "细节图优先使用酒店窗光、干净墙面或室内近景，保证材质、版型、领口、袖口、腰线可读。"
+    ],
+    "globalAvoid": [
+      "整套图都站在街边或墙前",
+      "连续正面无动作站姿",
+      "同一参考图构图复刻",
+      "复制人脸、品牌、文字、水印、飞机编号、艺术品细节",
+      "道具遮挡商品主体",
+      "为了场景牺牲商品清晰度"
+    ]
+  },
+  "sampleFileMap": {
+    "airport-wing-seated-sunglasses-01": {
+      "fileName": "微信图片_20260607234649.jpg",
+      "visualBrief": "飞机机翼前坐姿，扶墨镜，蓝天跑道"
+    },
+    "airport-cockpit-seated-02": {
+      "fileName": "微信图片_20260607234713.jpg",
+      "visualBrief": "驾驶舱旁坐姿，机舱盖和机翼形成透视"
+    },
+    "airport-cockpit-standing-03": {
+      "fileName": "微信图片_20260607234717.jpg",
+      "visualBrief": "飞机旁站姿，白衬衫短裙，强日光"
+    },
+    "airport-wing-side-sit-04": {
+      "fileName": "微信图片_20260607234720.jpg",
+      "visualBrief": "坐在红白机翼边缘，侧身腿部线条"
+    },
+    "airport-wing-side-sit-05": {
+      "fileName": "微信图片_20260607234724.jpg",
+      "visualBrief": "机翼坐姿变体，墨镜和长靴强调造型"
+    },
+    "resort-bike-dog-lawn-01": {
+      "fileName": "微信图片_20260607234728.jpg",
+      "visualBrief": "湖边自行车与宠物，绿地道路休闲"
+    },
+    "forest-flower-seated-dress-01": {
+      "fileName": "微信图片_20260607234733.jpg",
+      "visualBrief": "花丛坐姿，粉色裙装，森林边缘"
+    },
+    "forest-boardwalk-back-walk-02": {
+      "fileName": "微信图片_20260607234740.jpg",
+      "visualBrief": "木栈道背影行走，粉色裙摆动态"
+    },
+    "forest-lakeside-tree-lean-03": {
+      "fileName": "微信图片_20260607234744.jpg",
+      "visualBrief": "湖边树下倚靠，粉色裙装自然光"
+    },
+    "golf-cart-standing-01": {
+      "fileName": "微信图片_20260607234747.jpg",
+      "visualBrief": "高尔夫车旁站姿，白色休闲套装"
+    },
+    "golf-cart-front-standing-02": {
+      "fileName": "微信图片_20260607234750.jpg",
+      "visualBrief": "高尔夫车前正面，绿荫草坪"
+    },
+    "resort-lounge-seated-03": {
+      "fileName": "微信图片_20260607234754.jpg",
+      "visualBrief": "湖畔躺椅坐姿，条纹靠垫和遮阳伞"
+    },
+    "resort-lounge-seated-04": {
+      "fileName": "微信图片_20260607234758.jpg",
+      "visualBrief": "湖边躺椅正面坐姿，白色套装清晰"
+    },
+    "hotel-floor-recline-01": {
+      "fileName": "微信图片_20260607234801.jpg",
+      "visualBrief": "室内地面躺姿，黑色上衣短裤细节"
+    },
+    "resort-green-door-seated-05": {
+      "fileName": "微信图片_20260607234805.jpg",
+      "visualBrief": "绿色门前台阶坐姿，休闲度假"
+    },
+    "resort-arcade-drink-06": {
+      "fileName": "微信图片_20260607234808.jpg",
+      "visualBrief": "度假拱廊坐姿，棒球帽和饮品"
+    },
+    "resort-deck-chair-07": {
+      "fileName": "微信图片_20260607234812.jpg",
+      "visualBrief": "露台椅坐姿，购物袋道具"
+    },
+    "resort-arcade-standing-08": {
+      "fileName": "微信图片_20260607234816.jpg",
+      "visualBrief": "度假建筑旁站姿，高抬腿动作"
+    },
+    "mountain-rail-seated-01": {
+      "fileName": "微信图片_20260607234820.jpg",
+      "visualBrief": "山湖木栏坐姿，徒步靴和开阔湖景"
+    },
+    "coast-yacht-rail-01": {
+      "fileName": "微信图片_20260607234823.jpg",
+      "visualBrief": "游艇海面，扶栏迎风，海天背景"
+    },
+    "coast-sunset-rocks-02": {
+      "fileName": "微信图片_20260607234826.jpg",
+      "visualBrief": "海边日落岩石，黑色上衣牛仔短裤"
+    },
+    "coast-sunset-jacket-03": {
+      "fileName": "微信图片_20260607234830.jpg",
+      "visualBrief": "落日海岸，外套迎风动作"
+    },
+    "coast-yacht-back-seated-04": {
+      "fileName": "微信图片_20260607234834.jpg",
+      "visualBrief": "游艇尾部坐姿，背向海面蓝天"
+    },
+    "mountain-backpack-walk-02": {
+      "fileName": "微信图片_20260607234838.jpg",
+      "visualBrief": "山野背包行走，低机位天空"
+    },
+    "mountain-backpack-portrait-03": {
+      "fileName": "微信图片_20260607234841.jpg",
+      "visualBrief": "高原背包近景，蓝天云层"
+    },
+    "mountain-rock-seated-04": {
+      "fileName": "微信图片_20260607234845.jpg",
+      "visualBrief": "山湖岩石坐姿，机能穿搭"
+    },
+    "mountain-lake-wide-seated-05": {
+      "fileName": "微信图片_20260607234848.jpg",
+      "visualBrief": "高山湖远景坐姿，云层开阔"
+    },
+    "city-bridge-skyline-01": {
+      "fileName": "微信图片_20260607234852.jpg",
+      "visualBrief": "桥下江景栏杆，城市天际线"
+    },
+    "gallery-sculpture-dress-01": {
+      "fileName": "微信图片_20260607234856.jpg",
+      "visualBrief": "美术馆雕塑旁粉色长裙"
+    },
+    "gallery-arcade-corridor-02": {
+      "fileName": "微信图片_20260607234859.jpg",
+      "visualBrief": "拱廊长廊透视，粉色裙装"
+    },
+    "golf-garden-sports-09": {
+      "fileName": "微信图片_20260607234903.jpg",
+      "visualBrief": "花园绿植旁运动短装，扶帽动作"
+    },
+    "golf-lawn-crouch-10": {
+      "fileName": "微信图片_20260607234907.jpg",
+      "visualBrief": "草地蹲坐，棒球帽和运动装"
+    },
+    "golf-lawn-walk-11": {
+      "fileName": "微信图片_20260607234910.jpg",
+      "visualBrief": "草坪湖边行走，紫色运动裤"
+    },
+    "city-night-window-crouch-02": {
+      "fileName": "微信图片_20260607234914.jpg",
+      "visualBrief": "高空夜景窗边蹲坐，靴子和城市灯光"
+    },
+    "city-sunset-glass-03": {
+      "fileName": "微信图片_20260607234917.jpg",
+      "visualBrief": "高空玻璃观景，日落城市"
+    },
+    "city-doorway-sunglasses-04": {
+      "fileName": "微信图片_20260607234921.jpg",
+      "visualBrief": "现代门廊墨镜，棕色外套"
+    },
+    "hotel-window-collar-close-02": {
+      "fileName": "微信图片_20260607234925.jpg",
+      "visualBrief": "窗边近景，手扶衣领，外套材质"
+    },
+    "city-street-lensflare-05": {
+      "fileName": "微信图片_20260607234928.jpg",
+      "visualBrief": "城市街角逆光，黑色短裙通勤"
+    },
+    "hotel-bed-leather-sit-03": {
+      "fileName": "微信图片_20260607234931.jpg",
+      "visualBrief": "酒店床边坐姿，皮衣皮靴"
+    },
+    "hotel-bed-leather-side-04": {
+      "fileName": "微信图片_20260607234934.jpg",
+      "visualBrief": "酒店床边侧身坐姿，皮衣材质"
+    },
+    "hotel-room-swimwear-05": {
+      "fileName": "微信图片_20260607234938.jpg",
+      "visualBrief": "酒店房间镜前泳装，室内暖光"
+    },
+    "coast-beach-sunset-swim-05": {
+      "fileName": "微信图片_20260607234946.jpg",
+      "visualBrief": "海边日落泳装站姿，沙滩和海平线"
+    },
+    "hotel-clean-wall-knit-06": {
+      "fileName": "微信图片_20260607234949.jpg",
+      "visualBrief": "干净墙面针织套装，细节可读"
+    },
+    "hotel-clean-wall-fullbody-07": {
+      "fileName": "微信图片_20260607234953.jpg",
+      "visualBrief": "简洁墙面全身，包袋和靴子搭配"
+    },
+    "forest-flower-recline-04": {
+      "fileName": "微信图片_20260607234956.jpg",
+      "visualBrief": "花丛躺坐，白色上衣和绿植"
+    },
+    "forest-flower-seated-05": {
+      "fileName": "微信图片_20260607235000.jpg",
+      "visualBrief": "花丛坐姿，白色袖套和自然光"
+    },
+    "forest-cottage-standing-06": {
+      "fileName": "微信图片_20260607235003.jpg",
+      "visualBrief": "白色小屋前站姿，红短裙"
+    },
+    "forest-cottage-turnback-07": {
+      "fileName": "微信图片_20260607235007.jpg",
+      "visualBrief": "小屋前回头站姿，红鞋点缀"
+    },
+    "city-blue-sky-low-angle-06": {
+      "fileName": "微信图片_20260607235010.jpg",
+      "visualBrief": "蓝天低机位动态站姿，黑色运动穿搭"
+    }
+  }
+}

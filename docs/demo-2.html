@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>深度AI电商视觉工作站 9.0</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background: #020617; color: #f8fafc; font-family: 'PingFang SC', sans-serif; }
+        .active-blue { background: #3b82f6 !important; color: white !important; border-color: #60a5fa !important; }
+        .card-active { border: 2px solid #3b82f6 !important; background: rgba(59, 130, 246, 0.1) !important; }
+        .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+        /* 预览图小卡片样式 */
+        .preview-img { width: 45px; height: 45px; border-radius: 8px; object-fit: cover; background: #1e293b; }
+    </style>
+</head>
+<body class="h-screen overflow-hidden flex flex-col">
+
+    <header class="h-14 border-b border-slate-800 bg-slate-900/90 flex items-center justify-between px-8 z-50">
+        <div class="flex items-center space-x-3">
+            <div class="bg-blue-600 px-2 py-1 rounded font-black italic text-sm">DEEP AI</div>
+            <h1 class="text-xs font-bold text-slate-400">深度AI电商视觉工作站</h1>
+        </div>
+        <div class="flex bg-slate-950 p-1 rounded-lg border border-slate-800">
+            <button class="px-6 py-1 rounded-md text-[11px] font-bold bg-blue-600">图片生成</button>
+            <button class="px-6 py-1 rounded-md text-[11px] font-bold text-slate-500">短视频生成</button>
+        </div>
+    </header>
+
+    <main class="flex-1 flex overflow-hidden">
+        
+        <aside class="w-[480px] border-r border-slate-800 bg-slate-900/20 overflow-y-auto p-6 space-y-8 custom-scrollbar">
+            
+            <section>
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="text-blue-500 font-black italic text-sm">01</span>
+                    <h3 class="text-[11px] font-black text-slate-400 uppercase tracking-widest">分发平台选择</h3>
+                </div>
+                <div class="grid grid-cols-4 gap-2" id="platform-list">
+                    </div>
+            </section>
+
+            <section>
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="text-blue-500 font-black italic text-sm">02</span>
+                    <h3 class="text-[11px] font-black text-slate-400 uppercase tracking-widest">出片规格需求</h3>
+                </div>
+                <div class="flex flex-wrap gap-2" id="spec-list">
+                    </div>
+            </section>
+
+            <section>
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-blue-500 font-black italic text-sm">03</span>
+                        <h3 class="text-[11px] font-black text-slate-400 uppercase tracking-widest">模特形象锁定</h3>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 gap-2" id="model-list">
+                    </div>
+            </section>
+
+            <section>
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="text-blue-500 font-black italic text-sm">04</span>
+                    <h3 class="text-[11px] font-black text-slate-400 uppercase tracking-widest">衣服品类选择</h3>
+                </div>
+                <div class="grid grid-cols-2 gap-2" id="category-list">
+                    </div>
+            </section>
+
+            <section>
+                <div class="flex items-center space-x-2 mb-4">
+                    <span class="text-blue-500 font-black italic text-sm">05</span>
+                    <h3 class="text-[11px] font-black text-slate-400 uppercase tracking-widest">Top商家爆款复刻</h3>
+                </div>
+                <div class="space-y-2" id="style-list">
+                    </div>
+            </section>
+
+        </aside>
+
+        <div class="flex-1 bg-slate-950 p-12 flex flex-col items-center justify-center">
+            <div class="max-w-2xl w-full">
+                <div class="border-2 border-dashed border-slate-800 rounded-[40px] p-20 flex flex-col items-center justify-center bg-slate-900/10 group hover:border-blue-500 cursor-pointer">
+                    <div class="w-20 h-20 bg-blue-600 rounded-[25px] flex items-center justify-center text-3xl shadow-2xl">👔</div>
+                    <p class="mt-6 text-slate-400 font-bold text-sm">点击上传样衣图片</p >
+                </div>
+                <button class="w-full mt-8 bg-white text-black py-5 rounded-2xl font-black text-lg">开始智能视觉进化</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const db = {
+            platforms: [
+                { id: 'tmall', name: '天猫/淘宝', specs: ['主图 (1:1)', '长主图 (3:4)', '详情页长图'] },
+                { id: 'dewu', name: '得物Dewu', specs: ['1:1 质感图', 'SKU透明图', '细节图'] },
+                { id: 'xhs', name: '小红书', specs: ['笔记封面 (3:4)', '内容图 (9:16)'] },
+                { id: 'pdd', name: '拼多多', specs: ['高点击主图', '五张包', '详情页'] },
+                { id: 'douyin', name: '抖音电商', specs: ['方图', '直播挂载图'] },
+                { id: 'jd', name: '京东', specs: ['1:1 主图', '商务详情'] }
+            ],
+            models: [
+                { id: 'custom', name: '自主模特塑造', tag: '上传个人/拍摄模特照片训练', img: 'https://via.placeholder.com/100?text=Custom' },
+                { id: 'old', name: '静奢老钱', tag: '30-40岁/高端/气质', img: 'https://via.placeholder.com/100?text=OldMoney' },
+                { id: 'city', name: '日系CityBoy', tag: '18-25岁/少年/清爽', img: 'https://via.placeholder.com/100?text=CityBoy' },
+                { id: 'sport', name: '运动型男', tag: '阳光/肌肉/力量', img: 'https://via.placeholder.com/100?text=Sport' }
+            ],
+            categories: [
+                { id: 'c1', name: '通勤托特', desc: '托特包 / 手提包 / 公文包', icon: '▣' },
+                { id: 'c2', name: '斜挎肩背', desc: '斜挎包 / 腋下包 / 邮差包', icon: '◇' },
+                { id: 'c3', name: '双肩电脑包', desc: '双肩包 / 电脑包 / 书包', icon: '▤' },
+                { id: 'c4', name: '旅行箱包', desc: '拉杆箱 / 旅行袋 / 登机箱', icon: '▥' },
+                { id: 'c5', name: '皮具小包', desc: '钱包 / 卡包 / 化妆包', icon: '▧' },
+                { id: 'c6', name: '户外机能', desc: '户外包 / 机能包 / 运动包', icon: '△' },
+                { id: 'c7', name: '童包母婴', desc: '儿童包 / 书包 / 妈咪包', icon: '○' },
+                { id: 'c8', name: '收纳功能包', desc: '收纳包 / 洗漱包 / 分区包', icon: '□' }
+            ],
+            styles: [
+                { name: '意式公寓 (Luxury Deco)', desc: '高净值感 / 暖调 / 石材背景', img: 'https://via.placeholder.com/150?text=Luxury' },
+                { name: '常熟产带 (High Bright)', desc: '高亮实拍 / 档口质感 / 细节突出', img: 'https://via.placeholder.com/150?text=Industrial' },
+                { name: '杭州四季青 (Street Real)', desc: '自然街头 / 随手拍感 / 高信任度', img: 'https://via.placeholder.com/150?text=SJQ' },
+                { name: '胶片街拍 (Vintage Film)', desc: '颗粒感 / 抓拍感 / 故事性', img: 'https://via.placeholder.com/150?text=Vintage' }
+            ]
+        };
+
+        let currentP = 'tmall';
+
+        function render() {
+            // 01 平台
+            document.getElementById('platform-list').innerHTML = db.platforms.map(p => `
+                <button onclick="currentP='${p.id}';render()" class="border border-slate-800 p-2 rounded-lg text-[10px] font-bold ${currentP==p.id?'active-blue':''}">${p.name}</button>
+            `).join('');
+
+            // 02 规格
+            const specs = db.platforms.find(p=>p.id===currentP).specs;
+            document.getElementById('spec-list').innerHTML = specs.map((s,i) => `
+                <button class="border border-slate-800 px-3 py-1 rounded-full text-[10px] ${i===0?'active-blue':''}">${s}</button>
+            `).join('');
+
+            // 03 模特 (带图片)
+            document.getElementById('model-list').innerHTML = db.models.map((m,i) => `
+                <div class="border border-slate-800 p-2 rounded-xl flex items-center space-x-3 cursor-pointer ${i===0?'card-active':''}">
+                    < img src="${m.img}" class="preview-img">
+                    <div><p class="text-[11px] font-black">${m.name}</p ><p class="text-[9px] text-slate-500">${m.tag}</p ></div>
+                </div>
+            `).join('');
+
+            // 04 品类 (回正 7.0 分类)
+            document.getElementById('category-list').innerHTML = db.categories.map((c,i) => `
+                <div class="border border-slate-800 p-2 rounded-xl flex items-center space-x-2 cursor-pointer ${i===0?'card-active':''}">
+                    <span class="text-xl">${c.icon}</span>
+                    <p class="text-[10px] font-black">${c.name}</p >
+                </div>
+            `).join('');
+
+            // 05 画风 (带图片)
+            document.getElementById('style-list').innerHTML = db.styles.map((s,i) => `
+                <div class="border border-slate-800 p-3 rounded-xl flex items-center space-x-4 cursor-pointer hover:border-blue-500 ${i===0?'card-active':''}">
+                    < img src="${s.img}" class="w-16 h-16 rounded-lg object-cover">
+                    <div class="flex-1">
+                        <p class="text-[11px] font-black">${s.name}</p >
+                        <p class="text-[9px] text-slate-500 mt-1">${s.desc}</p >
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        render();
+    </script>
+</body>
+</html>
