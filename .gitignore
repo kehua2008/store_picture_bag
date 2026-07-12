@@ -1,5 +1,7 @@
 node_modules/
 .next/
+.next.failed-*
+.next.rollback-*
 .npm-cache/
 test-results/
 playwright-report/
