@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "start:bags": "next start --hostname 0.0.0.0 --port 7777",
+    "deploy:server": "bash scripts/deploy-bags-server.sh",
     "health:bags": "node scripts/server-health-check.mjs",
     "cleanup:bags": "node scripts/cleanup-generated-assets.mjs",
     "verify:isolation": "node scripts/verify-bags-isolation.mjs",
