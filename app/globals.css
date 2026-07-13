@@ -6494,10 +6494,12 @@ figure {
 @media (hover: hover) and (min-width: 881px) {
   .modelPosePreview {
     display: block;
-    left: calc(100% + 12px);
+    left: 48px;
+    max-width: calc(100% - 60px);
     opacity: 0;
     top: 50%;
-    transform: translate(-8px, -50%) scale(0.96);
+    transform: translateY(-50%) scale(0.96);
+    transform-origin: left center;
     transition: opacity 160ms ease, transform 160ms ease, visibility 160ms ease;
     visibility: hidden;
   }
@@ -6505,7 +6507,7 @@ figure {
   .modelOption:focus-visible .modelPosePreview,
   .modelOption:hover .modelPosePreview {
     opacity: 1;
-    transform: translate(0, -50%) scale(1);
+    transform: translateY(-50%) scale(1);
     visibility: visible;
   }
 }
