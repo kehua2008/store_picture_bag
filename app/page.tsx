@@ -3282,8 +3282,11 @@ export default function HomePage() {
                         }}
                       >
                         <i className="modelThumb">
-                          <img alt="" src={modelGenderIconSrc(item)} />
+                          <img alt={`${modelGenderLabels[item]}姿态示例`} src={modelGenderIconSrc(item)} />
                         </i>
+                        <span aria-hidden="true" className="modelPosePreview">
+                          <img alt="" src={modelGenderIconSrc(item)} />
+                        </span>
                         <span>
                           <strong>{modelGenderLabels[item]}</strong>
                           <em>{modelGenderDescription(item)}</em>
@@ -7661,7 +7664,7 @@ function modelGenderIconSrc(gender: ModelGender): string {
     upper_body_no_face: "upper-body-no-face",
     lower_body: "lower-body"
   };
-  return `/model-type-icons/${filenames[gender]}.webp`;
+  return `/model-type-poses/${filenames[gender]}.jpg`;
 }
 
 function modelGenderDescription(gender: ModelGender): string {

@@ -6467,6 +6467,49 @@ figure {
   width: 100%;
 }
 
+.modelOption {
+  position: relative;
+}
+
+.modelPosePreview {
+  background: #ffffff;
+  border: 1px solid rgba(47, 128, 237, 0.28);
+  border-radius: 12px;
+  box-shadow: 0 18px 38px rgba(15, 23, 42, 0.2);
+  display: none;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  width: 200px;
+  z-index: 30;
+}
+
+.modelPosePreview img {
+  aspect-ratio: 1;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+@media (hover: hover) and (min-width: 881px) {
+  .modelPosePreview {
+    display: block;
+    left: calc(100% + 12px);
+    opacity: 0;
+    top: 50%;
+    transform: translate(-8px, -50%) scale(0.96);
+    transition: opacity 160ms ease, transform 160ms ease, visibility 160ms ease;
+    visibility: hidden;
+  }
+
+  .modelOption:focus-visible .modelPosePreview,
+  .modelOption:hover .modelPosePreview {
+    opacity: 1;
+    transform: translate(0, -50%) scale(1);
+    visibility: visible;
+  }
+}
+
 .sampleProduct {
   background:
     radial-gradient(ellipse at 52% 58%, #94a3b8 0 24%, transparent 25%),
