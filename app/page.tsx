@@ -6259,13 +6259,12 @@ function VideoDevelopmentPlaceholder() {
 function UploadGlyph({ majorCategoryId: _majorCategoryId }: { majorCategoryId: MajorCategoryId }) {
   return (
     <svg aria-hidden="true" className="uploadGlyph" viewBox="0 0 64 64">
-      <path d="M8.5 40.2c7.2-1 13.7-4.2 19.3-9.6 3.5-3.4 6.1-7.8 10.6-10 4.3-2.1 9.1-.5 11.3 3.7 2.1 4 4.5 7 8.6 9 3.4 1.7 4.7 5.5 3.1 8.8-1.8 3.8-6.8 6-14.9 6H17.3c-6.2 0-10.1-2.7-8.8-7.9Z" fill="rgba(47, 128, 237, 0.08)" stroke="currentColor" strokeLinejoin="round" strokeWidth="3.4" />
-      <path d="M12.3 48.1h35.4c6.6 0 11.3-1.3 14.1-4" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="4.2" />
-      <path d="M16.4 42.2h34.1" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="2.7" opacity=".58" />
-      <path d="M38.2 20.6c-.5 8.2-5.3 15-14.5 20.2" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="2.7" opacity=".72" />
-      <path d="M31.6 31.1h16M28.4 36.1h21.4" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="3" />
-      <path d="M36.8 26.5l4.3 6.4M43.5 26.9l4.1 6.2" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="2.3" opacity=".85" />
-      <path d="M21 52.2h4.5M32.2 52.2h4.5M43.4 52.2h4.5" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="2.6" opacity=".55" />
+      <path d="M23 22v-4a9 9 0 0 1 18 0v4" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3.4" />
+      <path d="M18 27c0-6.1 4.9-11 11-11h6c6.1 0 11 4.9 11 11v23c0 2.2-1.8 4-4 4H22c-2.2 0-4-1.8-4-4V27Z" fill="rgba(47, 128, 237, 0.08)" stroke="currentColor" strokeLinejoin="round" strokeWidth="3.4" />
+      <path d="M23 31h18" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="3" />
+      <path d="M23 40h18v11H23z" fill="none" stroke="currentColor" strokeLinejoin="round" strokeWidth="3" />
+      <path d="M18 31l-5 6v12M46 31l5 6v12" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" opacity=".72" />
+      <path d="M29 23h6" fill="none" stroke="currentColor" strokeLinecap="round" strokeWidth="3" />
     </svg>
   );
 }
